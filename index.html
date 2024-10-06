@@ -96,7 +96,8 @@
 <body>
     <div class="container animated">
         <img class="centered-image" src="static/server.png" alt="Server">
-        <h1>id="server-name">Minecraft Server</h1>
+        <!-- Fixed the h1 tag to use the correct id attribute -->
+        <h1 id="server-name">Minecraft Server</h1>
         <h3>Server Status</h3>
         <p id="version">Server Version: N/A</p>
         <p id="motd">Motd: N/A</p>
@@ -131,7 +132,7 @@
                 .then(data => {
                     document.getElementById('server-name').innerText = data.hostname || "Unknown Server";
                     document.getElementById('version').innerText = `Server Version: ${data.version || "N/A"}`;
-                    
+
                     // Decode HTML entities for the MOTD
                     const motdText = data.motd ? data.motd.clean.join(" ") : "N/A";
                     document.getElementById('motd').innerText = `Motd: ${decodeHtml(motdText)}`;
