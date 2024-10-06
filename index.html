@@ -95,7 +95,6 @@
 </head>
 <body>
     <div class="container animated">
-        <!-- Image referencing static directory -->
         <img class="centered-image" src="static/server.png" alt="Server">
         <h1>id="server-name">Minecraft Server</h1>
         <h3>Server Status</h3>
@@ -107,10 +106,9 @@
         <p id="map">Map: N/A</p>
         <p id="gamemode">Gamemode: N/A</p>
         <p id="server-id">Server ID: N/A</p>
-        <p id="home-coords">Home Coordinates: -513, 68, 61</p> <!-- Static Home Coordinates -->
     </div>
     <div class="footer animated">
-        Made by Chris Panetta. Forked from RDNSX. Get the original at 
+        Made by Chris Panetta for OTU Scholars Club. Forked from RDNSX. Get the original at 
         <a href="https://github.com/rdnsx/Bedrock-Status" target="_blank">
             GitHub <img class="git-logo" src="static/git.png" alt="GitHub Logo">
         </a>
@@ -126,7 +124,7 @@
 
         // Function to fetch Minecraft server data
         function fetchServerData() {
-            const apiUrl = 'https://api.mcsrvstat.us/3/minecraft.chrispanetta.com';
+            const apiUrl = 'https://api.mcsrvstat.us/3/ScholarsEscape.club:44874';
 
             fetch(apiUrl)
                 .then(response => response.json())
